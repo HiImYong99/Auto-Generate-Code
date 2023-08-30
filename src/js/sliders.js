@@ -37,8 +37,4 @@ function showSlide(n) {
 
   // show the active slide
   slides[slideIndex - 1].classList.remove("hidden");
-
-  // highlight the active dot
-  dots[slideIndex - 1].classList.remove("bg-green-600");
-  dots[slideIndex - 1].classList.add("bg-yellow-500");
 }
