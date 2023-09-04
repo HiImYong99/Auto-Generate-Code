@@ -7,15 +7,13 @@
     <title>Auto Coding</title>
     <link href="dist/output.css" rel="stylesheet">
     <link rel="shortcut icon" href="asset/img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
-    <a href="./index.html"></a>
-    <a href="./pages/mypage.html"></a>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 
-<body class="font-GmarketSansMedium ">
+<body class="font-GmarketSansMedium">
 
     <header>
-        <div class="fixed top-0 z-10 flex flex-wrap items-center justify-between w-full p-6 bg-gray-400 opacity-90">
+        <div class="fixed top-0 z-10 flex flex-wrap items-center justify-between w-full p-6 bg-gray-400 opacity-95">
             <nav class="flex items-center flex-shrink-0 mr-6">
                 <a class=" hover:text-white" href="#">
                     <span class="pl-2 text-2xl"> Auto Coding</span>
@@ -37,7 +35,7 @@
                     </li>
                 </ul>
             </nav>
-            <header class="block md:hidden">
+            <div class="block md:hidden">
                 <button id="nav-toggle"
                     class="flex items-center px-3 py-2 text-gray-500hover:text-white hover:border-white">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -45,33 +43,23 @@
                         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
                     </svg>
                 </button>
-            </header>
+            </div>
         </div>
         <h1 class="flex flex-col items-center justify-center">
             <a href="#" class="cursor-default"><img src="asset/img/auto-coding-logo.png" alt="Auto-Coding" width="600"
                     height="400"></a>
         </h1>
+
     </header>
 
 
-    <!-- <header class="fixed top-0 z-10 flex flex-row justify-between w-full px-12 bg-gray-400 py-7 ">
-        <nav>
-            <a href="#" class="text-2xl font-bold "> Auto Coding</a>
-        </nav>
-        <nav>
-            <ul class="flex flex-row gap-10 text-md">
-                <li><a href="#code-run" class="text-white bg-blue-500 px-3 py-2.5 rounded-3xl cursor-pointer">시작하기</a>
-                </li>
-                <li><a href="#how-to" class="cursor-pointer">사용법</a></li>
-                <li><a href="./pages/mypage.html" class="cursor-pointer">내 통계</a></li>
-            </ul>
-        </nav>
-    </header> -->
+
 
     <main class="p-10">
-        <aricle class="p-10 ">
-            <p class="mb-12 text-3xl text-center bg-gray-200 rounded-2xl" style="padding: 12px 0;">🚀 주요 기능 🚀</p>
-            <ul class="list-disc list-inside ">
+        <section>
+            <h2 class="items-center py-3 mb-12 text-3xl text-center bg-gray-200 rounded-2xl font-GongGothicMedium">🚀 주요
+                기능 🚀</h2>
+            <ul class="list-disc list-inside">
                 <li class="mb-6">
                     자동 코드 생성: Auto Coding은 사용자의 요구에 기반하여 다양한 프로그래밍 언어로 필요한 코드를 자동으로 생성해드립니다. 어떤 작업이든, 우리의 인공지능
                     모델이
@@ -90,13 +78,13 @@
                     작업을 지원합니다.
                 </li>
             </ul>
-        </aricle>
+        </section>
 
 
-        <article>
-            <p class="mb-12 text-3xl text-center bg-gray-200 rounded-2xl" id="how-to" style="padding: 12px 0;"> ❓ 사용방법
-                ❓ </p>
-            <!-- Implement the carousel -->
+        <section>
+            <h2 class="py-3 mb-12 text-3xl text-center bg-gray-200 rounded-2xl font-GongGothicMedium" id="how-to"> ❓
+                사용방법
+                ❓ </h2>
             <div class="relative w-1/2 mx-auto">
                 <div class="relative slide">
                     <img class="object-cover max-w-full" src="asset/img/card-slide-1.png" alt="사용법1">
@@ -106,7 +94,7 @@
                     </div>
                 </div>
 
-                <div class="relative text-center slide">
+                <div class="relative slide">
                     <img class="object-cover max-w-full" src="asset/img/card-slide-2.png" alt="사용법2">
                     <div class="absolute bottom-0 w-full px-5 py-3 font-bold text-center text-white bg-black/40">2. 코드
                         or 요청사항 입력
@@ -128,19 +116,18 @@
                     </div>
                 </div>
 
-                <!-- The previous button -->
+
                 <a class="absolute left-0 p-4 text-white -translate-y-1/2 rounded-full cursor-pointer top-1/2 bg-black/30 hover:bg-black/50"
                     onclick="moveSlide(-1)">❮</a>
 
-                <!-- The next button -->
+
                 <a class="absolute right-0 p-4 text-white -translate-y-1/2 rounded-full cursor-pointer top-1/2 bg-black/30 hover:bg-black/50"
                     onclick="moveSlide(1)">❯</a>
-
             </div>
             <br>
-        </article>
-        <aricle class="p-10 ">
-            <p class="mb-12 text-3xl text-center bg-gray-200 rounded-2xl" style="padding:12px 0;"> ⚠️ 주의 사항 ⚠️</p>
+        </section>
+        <section>
+            <h2 class="py-3 mb-12 text-3xl text-center bg-gray-200 rounded-2xl font-GongGothicMedium"> ⚠️ 주의 사항 ⚠️</h2>
             <ul class="list-disc list-inside ">
                 <li class="mb-6">
                     이 인공지능 모델은 2021년까지의 정보까지만 학습되었습니다. 따라서 2021년 이후의 새로운 기술, 정보, 이벤트 등에 관한 정확하고 최신의 답변을 제공할 수 없을 수 있습니다.
@@ -155,11 +142,12 @@
                 </li>
             </ul>
 
-        </aricle>
-        <article class="">
-            <p class="mb-12 text-3xl text-center bg-gray-200 rounded-2xl" id="code-run" style="padding: 12px 0;">💻 시작하기
-                💻</p>
-            <div class="flex flex-row flex-wrap justify-evenly ">
+        </section>
+        <section>
+            <h2 class="py-3 mb-12 text-3xl text-center bg-gray-200 rounded-2xl font-GongGothicMedium" id="code-run">💻
+                시작하기
+                💻</h2>
+            <div class="flex flex-row flex-wrap justify-evenly">
                 <form action="post" id="user-form" class="flex flex-col">
                     <label for="language" class="text-2xl font-bold text-center mb-9">유저 입력 💬</label>
                     <label for="language" class="mb-4">프로그래밍 언어</label>
@@ -188,17 +176,18 @@
                         class="text-white  bg-blue-500 px-3 py-2.5 rounded-3xl cursor-pointer mb-10">요청
                     </button>
                 </form>
-                <div class="flex flex-col ">
+                <div class="flex flex-col w-96 max-h-[680px]">
                     <p class="text-2xl font-bold text-center mb-9">AI 🤖
                     </p>
                     <p class="mb-4">
                         AI의 답변
                     </p>
-                    <div id="ai-answer" class=" px-6 py-4 mb-6 text-gray-400 border resize-none  h-full rounded-xl">
+                    <div id="ai-answer" class="px-6 py-4 mb-4 overflow-auto border mb-6text-gray-400 rounded-xl"
+                        style="height: 472px; min-height: 240px;">
                         AI의
-                        답변이 제공됩니다</div>
+                        답변이 제공됩니다.</div>
 
-                    <!-- <textarea name="answer" id="ai-answer" cols=" 30" rows="10" placeholder="AI의 답변이 제공됩니다." required
+                    <!-- <textarea name="answer" id="ai-answer" cols="30" rows="10" placeholder="AI의 답변이 제공됩니다." required
                         disabled spellcheck="false"
                         class="h-full px-6 py-4 mb-6 border resize-none rounded-xl"></textarea> -->
 
@@ -207,13 +196,11 @@
                     </button>
                 </div>
             </div>
-            </div>
-        </article>
+        </section>
 
     </main>
-    <footer class="flex flex-row justify-between w-full px-12 py-3 " style="background-color:  #ddd;">
-
-        <p class="text-sm font-bold ">Copyright © Auto Coding 2023</p>
+    <footer class="flex flex-row items-center justify-between w-full px-12 py-3" style="background-color: #ddd;">
+        <p class="text-sm font-bold">Copyright © Auto Coding 2023</p>
         <nav>
             <div class="flex flex-row gap-10 text-md">
                 <div class="rounded-full hover:bg-blue-300">
@@ -233,7 +220,6 @@
     <script type="module" src="src/js/app.js"></script>
 
     <script>
-        //Javascript to toggle the menu
         document.getElementById('nav-toggle').onclick = function () {
             document.getElementById("nav-content").classList.toggle("hidden");
         }

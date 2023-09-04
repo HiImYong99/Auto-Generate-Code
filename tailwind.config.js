@@ -5,6 +5,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       GmarketSansMedium: ["GmarketSansMedium"],
+      GongGothicMedium: ["GongGothicMedium"],
     },
   },
   plugins: [],

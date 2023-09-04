@@ -62,8 +62,9 @@ $form.addEventListener("submit", e => {
   const detail_value = $input_text.value;
   const load = document.createElement("img");
   alert("요청되었습니다. 잠시만 기다려주세요.");
-  load.setAttribute("src", "asset/img/loading.gif");
-  $output_text.innerHTM = load;
+  load.setAttribute("src", "../asset/img/loading.gif");
+  // $output_text.innerHTML = "<img src='../asset/img/loading.gif'>";
+  // $output_text.innerText = "잠시만 기다려주세요";
   sendQuestion(lang_value, method_value, detail_value);
   apiPost();
   // printQuestion();
