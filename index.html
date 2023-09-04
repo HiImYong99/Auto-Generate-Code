@@ -21,17 +21,22 @@
             </nav>
             <nav class="flex-grow hidden w-full pt-6 md:flex md:items-center md:w-auto md:pt-0" id="nav-content">
                 <ul class="items-center justify-end flex-1 list-reset md:flex">
-                    <li class="mr-3">
-                        <a class="inline-block px-4 py-2 text-white bg-blue-500 rounded-3xl hover:text-black"
-                            href="#code-run">시작하기</a>
-                    </li>
-                    <li class="mr-3">
+                    <li id="howto-link" class="mr-3">
                         <a class="inline-block px-4 py-2 text-gray-600 no-underline hover:text-gray-200 hover:text-underline"
                             href="#how-to">사용법</a>
                     </li>
-                    <li class="mr-3">
+                    <li id="start-link" class="mr-3">
+                        <a class="inline-block px-4 py-2 text-gray-600 hover:text-gray-200 
+                        " href="#code-run">시작하기</a>
+                    </li>
+
+                    <li id="info-link" class="mr-3">
                         <a class="inline-block px-4 py-2 text-gray-600 no-underline hover:text-gray-200 hover:text-underline"
                             href="./pages/mypage.html">내 통계</a>
+                    </li>
+                    <li id="history-link" class="mr-3">
+                        <a class="inline-block px-4 py-2 text-gray-600 no-underline hover:text-gray-200 hover:text-underline"
+                            href="./pages/myhistroy.html">내 기록</a>
                     </li>
                 </ul>
             </nav>
@@ -49,11 +54,7 @@
             <a href="#" class="cursor-default"><img src="asset/img/auto-coding-logo.png" alt="Auto-Coding" width="600"
                     height="400"></a>
         </h1>
-
     </header>
-
-
-
 
     <main class="p-10">
         <section>
@@ -182,14 +183,14 @@
                     <p class="mb-4">
                         AI의 답변
                     </p>
-                    <div id="ai-answer" class="px-6 py-4 mb-4 overflow-auto border mb-6text-gray-400 rounded-xl"
-                        style="height: 472px; min-height: 240px;">
+                    <div id="ai-answer" class="px-6 py-4 overflow-auto border mb-6 text-gray-400 rounded-xl"
+                        style="min-width: 100%; min-height:68%;">
                         AI의
-                        답변이 제공됩니다.</div>
+                        답변이 제공됩니다.<div class="text-center">
+                        </div>
 
-                    <!-- <textarea name="answer" id="ai-answer" cols="30" rows="10" placeholder="AI의 답변이 제공됩니다." required
-                        disabled spellcheck="false"
-                        class="h-full px-6 py-4 mb-6 border resize-none rounded-xl"></textarea> -->
+                    </div>
+
 
                     <button type="submit" id="btn"
                         class="text-white  bg-blue-500 px-3 py-2.5 rounded-3xl cursor-pointer mb-10">코드 실행해보기
@@ -199,7 +200,7 @@
         </section>
 
     </main>
-    <footer class="flex flex-row items-center justify-between w-full px-12 py-3" style="background-color: #ddd;">
+    <footer class="flex flex-row items-center justify-between w-full px-12 py-3 mt-20" style="background-color: #ddd;">
         <p class="text-sm font-bold">Copyright © Auto Coding 2023</p>
         <nav>
             <div class="flex flex-row gap-10 text-md">

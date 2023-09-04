@@ -3,7 +3,7 @@ const $lang_count = document.querySelector("#lang-count");
 const $method_count = document.querySelector("#method-count");
 const $remove_btn = document.querySelector("#local-remove");
 
-function load_Item() {
+function load_count() {
   let lang = localStorage.getItem("lang")
     ? JSON.parse(localStorage.getItem("lang"))
     : [];
@@ -31,20 +31,20 @@ function write_count(lang, method, detail) {
   let most_lang_count = getSortedArr(lang)[0][1];
   let most_method_name = getSortedArr(method)[0][0];
   let most_method_count = getSortedArr(method)[0][1];
-  
+
   $use_count.innerText = lang.length + "회";
   $lang_count.innerText = `${most_lang_name} ( ${most_lang_count}회 )`;
   $method_count.innerText = `${most_method_name} ( ${most_method_count}회 )`;
 }
-load_Item();
+load_count();
 
 $remove_btn.addEventListener("click", () => {
   if (confirm("정말 사용했던 기록을 초기화 하시겠습니까?")) {
     localStorage.removeItem("lang");
     localStorage.removeItem("method");
     localStorage.removeItem("detail");
+    load_count();
   }
-  load_Item();
 });
 
 function getSortedArr(array) {

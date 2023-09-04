@@ -30,11 +30,19 @@ const sendQuestion = (lang, method, detail) => {
 
 // api에게 받은 답변을 화면에 출력함
 
+// let ai = localStorage.getItem("ai")
+//   ? JSON.parse(localStorage.getItem("ai"))
+//   : [];
 const printAnswer = async answer => {
-  let p = document.createElement("p");
-  p.classList.add("answer");
-  console.log(p);
-  $output_text.textContent = answer;
+  let pre = document.createElement("pre");
+  let ai_arr = localStorage.getItem("ai")
+    ? JSON.parse(localStorage.getItem("ai"))
+    : [];
+  $output_text.innerText = "";
+  pre.innerText = answer;
+  ai_arr.push(answer);
+  localStorage.setItem("ai", JSON.stringify(ai_arr));
+  $output_text.appendChild(pre);
 };
 
 const apiPost = async () => {
@@ -60,9 +68,7 @@ $form.addEventListener("submit", e => {
   const lang_value = $input_lang.options[$input_lang.selectedIndex].value;
   const method_value = $input_method.options[$input_method.selectedIndex].value;
   const detail_value = $input_text.value;
-  const load = document.createElement("img");
   alert("요청되었습니다. 잠시만 기다려주세요.");
-  load.setAttribute("src", "../asset/img/loading.gif");
   // $output_text.innerHTML = "<img src='../asset/img/loading.gif'>";
   // $output_text.innerText = "잠시만 기다려주세요";
   sendQuestion(lang_value, method_value, detail_value);
@@ -83,15 +89,15 @@ $btn.addEventListener("click", e => {
 function save_Item(lang, method, detail) {
   let lang_arr = load_Item()[0];
   let method_arr = load_Item()[1];
-  // let detail_arr = load_Item()[2];
+  let detail_arr = load_Item()[2];
 
   lang_arr.push(lang);
   method_arr.push(method);
-  // detail_arr.push(detail);
+  detail_arr.push(detail);
 
   localStorage.setItem("lang", JSON.stringify(lang_arr));
   localStorage.setItem("method", JSON.stringify(method_arr));
-  // localStorage.setItem("detail", JSON.stringify(detail_arr));
+  localStorage.setItem("detail", JSON.stringify(detail_arr));
 }
 
 function load_Item() {
@@ -104,5 +110,6 @@ function load_Item() {
   let detail = localStorage.getItem("detail")
     ? JSON.parse(localStorage.getItem("detail"))
     : [];
+
   return [lang, method, detail];
 }
