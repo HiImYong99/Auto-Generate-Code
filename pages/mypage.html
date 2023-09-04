@@ -6,29 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Coding</title>
     <link href="../dist/output.css" rel="stylesheet">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="../../asset/img/favicon.ico">
 </head>
 
 
 <body class="font-GmarketSansMedium scroll-smooth ">
-    <header class="flex flex-row justify-between w-full px-12 bg-gray-400 py-7 md:">
+    <header class="flex flex-row justify-between w-full px-12 bg-gray-400 py-7 opacity-90">
         <nav>
-            <a href="../index.html" class="text-2xl font-bold ">Auto Coding</a>
+            <a href="../index.html" class="text-2xl font-bold hover:text-white ">Auto Coding</a>
         </nav>
-        <button id="local-remove" class="text-white px-3 py-2.5 rounded-3xl cursor-pointer"
-            style="background-color: #c8362e;">기록삭제</button>
+        <button id="local-remove"
+            class="text-white  hover:text-black px-3 py-2.5 rounded-3xl cursor-pointer bg-red-500">기록삭제</button>
     </header>
     <main class="p-10 ">
-        <!-- <div class="w-screen h-screen bg-[url('/asset/img/bg-code.jpg')]"> -->
+        <!-- <div class=" w-screen h-screen bg-[url('/asset/img/bg-code.jpg')]"> -->
 
         <aricle class="p-10 ">
-            <p class="mb-10 text-2xl text-center bg-gray-200 rounded-2xl" style="padding: 12px 0;">내가 Auto Coding을 이용한
+            <p class="mb-10 text-2xl text-center bg-gray-200 rounded-2xl" style="padding: 12px 0;">내가 Auto Coding을
+                이용한
                 횟수는</p>
             <p id="use-count" class="text-4xl text-center">0회</p>
         </aricle>
         <aricle class="p-10 ">
-            <p class="mb-10 text-2xl text-center bg-gray-200 rounded-2xl" style="padding: 12px 0;">내가 가장 많이 사용한 언어는</p>
+            <p class="mb-10 text-2xl text-center bg-gray-200 rounded-2xl" style="padding: 12px 0;">내가 가장 많이 사용한 언어는
+            </p>
             <p id="lang-count" class="text-4xl text-center">0회</p>
         </aricle>
         <aricle class="p-10 ">
@@ -41,24 +43,23 @@
 
         <p class="text-sm font-bold ">Copyright © Auto Coding 2023</p>
         <nav>
-            <ul class="flex flex-row gap-10 text-lg">
+            <div class="flex flex-row gap-10 text-lg">
                 <div class="rounded-full hover:bg-blue-300">
                     <a href="https://www.instagram.com/yong_9_9/" target="_blank">
-                        <img class="w-10 " src="../../asset/img/instagram.png" alt="인스타그램">
+                        <img class="w-10 " src="../asset/img/instagram.png" alt="인스타그램">
                     </a>
                 </div>
                 <div class="rounded-full hover:bg-blue-300">
                     <a href="https://github.com/HiImYong99" target="_blank">
-                        <img class="w-10" src="../../asset/img/github.png" alt="깃허브">
+                        <img class="w-10" src="../asset/img/github.png" alt="깃허브">
                     </a>
                 </div>
 
-                </div>
-            </ul>
+            </div>
         </nav>
     </footer>
+    <script src="../src/js/mypage.js"></script>
 </body>
 <!-- <script type="module" src="../js/app.js"></script> -->
-<script src="../src/js/mypage.js"></script>
 
 </html>
