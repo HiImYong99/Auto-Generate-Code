@@ -6,6 +6,7 @@ const $input_method = document.querySelector("#method");
 const $btn = document.querySelector("#btn");
 const $input_text = document.querySelector("#detail-content");
 const $output_text = document.querySelector("#ai-answer");
+const $loading = document.querySelector("#loading");
 
 let url = "https://estsoft-openai-api.jejucodingcamp.workers.dev/";
 
@@ -38,10 +39,14 @@ const printAnswer = async answer => {
   let ai_arr = localStorage.getItem("ai")
     ? JSON.parse(localStorage.getItem("ai"))
     : [];
-  $output_text.innerText = "";
   pre.innerText = answer;
   ai_arr.push(answer);
   localStorage.setItem("ai", JSON.stringify(ai_arr));
+  $loading.style.display = "none";
+  const $existingPre = $output_text.querySelector("pre");
+  if ($existingPre) {
+    $output_text.removeChild($existingPre);
+  }
   $output_text.appendChild(pre);
 };
 
@@ -69,8 +74,7 @@ $form.addEventListener("submit", e => {
   const method_value = $input_method.options[$input_method.selectedIndex].value;
   const detail_value = $input_text.value;
   alert("요청되었습니다. 잠시만 기다려주세요.");
-  // $output_text.innerHTML = "<img src='../asset/img/loading.gif'>";
-  // $output_text.innerText = "잠시만 기다려주세요";
+  loading_appear();
   sendQuestion(lang_value, method_value, detail_value);
   apiPost();
   // printQuestion();
@@ -112,4 +116,10 @@ function load_Item() {
     : [];
 
   return [lang, method, detail];
+}
+
+function loading_appear() {
+  const $example = document.querySelector("#explain");
+  $example.style.display = "none";
+  $loading.style.display = "block";
 }

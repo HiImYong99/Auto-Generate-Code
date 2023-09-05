@@ -183,14 +183,16 @@
                     <p class="mb-4">
                         AI의 답변
                     </p>
-                    <div id="ai-answer" class="px-6 py-4 overflow-auto border mb-6 text-gray-400 rounded-xl"
+                    <div id="ai-answer" class="px-6 py-4 overflow-auto border mb-6 text-gray-400 rounded-xl relative"
                         style="min-width: 100%; min-height:68%;">
-                        AI의
-                        답변이 제공됩니다.<div class="text-center">
+                        <div  class="absolute right-1/2 bottom-1/2  transform translate-x-1/2 translate-y-1/2">
+                            <div id="loading" class="border-t-transparent border-solid animate-spin  rounded-full border-blue-400 border-4 w-24 hidden"></div>
                         </div>
-
+                        <p id="explain">
+                            AI의
+                            답변이 제공됩니다.
+                        </p>
                     </div>
-
 
                     <button type="submit" id="btn"
                         class="text-white  bg-blue-500 px-3 py-2.5 rounded-3xl cursor-pointer mb-10">코드 실행해보기
