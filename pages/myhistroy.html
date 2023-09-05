@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <title>Auto Coding</title>
     <link href="../dist/output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="../../asset/img/favicon.ico">
+    <link rel="shortcut icon" href="asset/img/favicon.ico">
 </head>
 
 
@@ -17,31 +17,31 @@
             <a href="../index.html" class="text-2xl font-bold hover:text-white ">Auto Coding</a>
         </nav>
         <button id="history-remove"
-            class="text-white  hover:text-black px-3 py-2.5 rounded-3xl cursor-pointer bg-red-500">기록삭제</button>
+            class="text-white  hover:text-black px-6 py-2.5 rounded-3xl cursor-pointer bg-red-500">기록삭제</button>
     </header>
     <main class="p-10 ">
-        <h2 class="mb-10 text-2xl text-center bg-gray-200 rounded-2xl font-GongGothicMedium py-3">내 기록</h2>
-        <section class="p-10 flex flex-row flex-wrap justify-evenly">
+        <h2 class="py-3 mb-10 text-2xl text-center bg-gray-200 rounded-2xl font-GongGothicMedium">내 기록 📝</h2>
+        <section class="flex flex-row flex-wrap p-10 justify-evenly">
             <div class="flex flex-col">
-                <p class="text-2xl font-bold text-center mb-9">요청기록 📚</p>
-                <div id="question" class="px-6 py-4 w-1/3 flex flex-col overflow-auto border mb-6 rounded-xl"
+                <h3 class="text-2xl font-bold text-center mb-9">요청기록 📚</h3>
+                <div id="question" class="flex flex-col w-1/3 px-6 py-4 mb-6 overflow-auto border rounded-xl"
                     style="width: 300px; height: 472px; min-height: 240px;">
                 </div>
             </div>
             <div>
-                <p class="text-2xl font-bold text-center mb-9">답변기록 🖨️</p>
-                <div id="result" class="px-6 py-4 w-3/5 overflow-auto border mb-6  rounded-xl"
+                <h3 class="text-2xl font-bold text-center mb-9">답변기록 🖨️</h3>
+                <div id="result" class="w-3/5 px-6 py-4 mb-6 overflow-auto border rounded-xl"
                     style="width: 550px; height: 472px; min-height: 240px;"> </div>
             </div>
         </section>
     </main>
-    <footer class="flex flex-row justify-between items-center w-full px-12 py-3 static bottom-0">
+    <footer class="bottom-0 flex flex-row items-center justify-between w-full px-12 py-3 bg-slate-300">
         <p class="text-sm font-bold ">Copyright © Auto Coding 2023</p>
         <nav>
-            <div class="flex flex-row  gap-10 text-lg">
+            <div class="flex flex-row gap-10 text-lg ">
                 <div class="rounded-full hover:bg-blue-300">
                     <a href="https://www.instagram.com/yong_9_9/" target="_blank">
-                        <img class="w-10 " src="../asset/img/instagram.png" alt="인스타그램">
+                        <img class="w-10" src="../asset/img/instagram.png" alt="인스타그램">
                     </a>
                 </div>
                 <div class="rounded-full hover:bg-blue-300">
@@ -49,7 +49,6 @@
                         <img class="w-10" src="../asset/img/github.png" alt="깃허브">
                     </a>
                 </div>
-
             </div>
         </nav>
     </footer>
