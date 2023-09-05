@@ -1,4 +1,5 @@
 import { data } from "./data.js";
+import { save_Item } from "./local-storage.js";
 
 const $form = document.querySelector("#user-form");
 const $input_lang = document.querySelector("#language");
@@ -10,48 +11,32 @@ const $loading = document.querySelector("#loading");
 
 let url = "https://estsoft-openai-api.jejucodingcamp.workers.dev/";
 
-// 사용자의 질문
-let question;
+// 요청버튼 클릭 시 발생
+$form.addEventListener("submit", e => {
+  e.preventDefault();
 
-// 화면에 뿌려줄 데이터, 질문들
-let questionData = [];
+  const lang_value = $input_lang.options[$input_lang.selectedIndex].value;
+  const method_value = $input_method.options[$input_method.selectedIndex].value;
+  const detail_value = $input_text.value;
+
+  alert("요청되었습니다. 잠시만 기다려주세요.");
+  loading_appear();
+  sendQuestion(lang_value, method_value, detail_value);
+  apiPost();
+  save_Item(lang_value, method_value, detail_value);
+});
 
 //사용자에게 입력받은 요청을 data에 넣음
-
 const sendQuestion = (lang, method, detail) => {
   data.push({
     role: "user",
     content: `프로그래밍 언어는 ${lang}이고 ${detail}이걸 ${method} 해줘`,
   });
-  questionData.push({
-    role: "user",
-    content: `프로그래밍 언어는 ${lang}이고 ${detail}이걸 ${method} 해줘`,
-  });
 };
 
-// api에게 받은 답변을 화면에 출력함
-
-// let ai = localStorage.getItem("ai")
-//   ? JSON.parse(localStorage.getItem("ai"))
-//   : [];
-const printAnswer = async answer => {
-  let pre = document.createElement("pre");
-  let ai_arr = localStorage.getItem("ai")
-    ? JSON.parse(localStorage.getItem("ai"))
-    : [];
-  pre.innerText = answer;
-  ai_arr.push(answer);
-  localStorage.setItem("ai", JSON.stringify(ai_arr));
-  $loading.style.display = "none";
-  const $existingPre = $output_text.querySelector("pre");
-  if ($existingPre) {
-    $output_text.removeChild($existingPre);
-  }
-  $output_text.appendChild(pre);
-};
-
+// api 통신 만약 성공시 printAnswer 함수 인자값에 받아온 결과값 전달
 const apiPost = async () => {
-  const result = await fetch(url, {
+  await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -68,19 +53,24 @@ const apiPost = async () => {
     });
 };
 
-$form.addEventListener("submit", e => {
-  e.preventDefault();
-  const lang_value = $input_lang.options[$input_lang.selectedIndex].value;
-  const method_value = $input_method.options[$input_method.selectedIndex].value;
-  const detail_value = $input_text.value;
-  alert("요청되었습니다. 잠시만 기다려주세요.");
-  loading_appear();
-  sendQuestion(lang_value, method_value, detail_value);
-  apiPost();
-  // printQuestion();
-  save_Item(lang_value, method_value, detail_value);
-});
+// api에게 받은 답변을 화면에 출력함
+const printAnswer = async answer => {
+  let pre = document.createElement("pre");
+  let ai_arr = localStorage.getItem("ai")
+    ? JSON.parse(localStorage.getItem("ai"))
+    : [];
+  pre.innerText = answer;
+  ai_arr.push(answer);
+  localStorage.setItem("ai", JSON.stringify(ai_arr));
+  $loading.style.display = "none";
+  const $existingPre = $output_text.querySelector("pre");
+  if ($existingPre) {
+    $output_text.removeChild($existingPre);
+  }
+  $output_text.appendChild(pre);
+};
 
+//실행해보기 버튼 클릭 시 발생
 $btn.addEventListener("click", e => {
   const openNewWindow = window.open("about:blank");
   openNewWindow.location.href =
@@ -88,36 +78,7 @@ $btn.addEventListener("click", e => {
     $input_lang.options[$input_lang.selectedIndex].value;
 });
 
-// 로컬 스토리지에 저장
-
-function save_Item(lang, method, detail) {
-  let lang_arr = load_Item()[0];
-  let method_arr = load_Item()[1];
-  let detail_arr = load_Item()[2];
-
-  lang_arr.push(lang);
-  method_arr.push(method);
-  detail_arr.push(detail);
-
-  localStorage.setItem("lang", JSON.stringify(lang_arr));
-  localStorage.setItem("method", JSON.stringify(method_arr));
-  localStorage.setItem("detail", JSON.stringify(detail_arr));
-}
-
-function load_Item() {
-  let lang = localStorage.getItem("lang")
-    ? JSON.parse(localStorage.getItem("lang"))
-    : [];
-  let method = localStorage.getItem("method")
-    ? JSON.parse(localStorage.getItem("method"))
-    : [];
-  let detail = localStorage.getItem("detail")
-    ? JSON.parse(localStorage.getItem("detail"))
-    : [];
-
-  return [lang, method, detail];
-}
-
+// spinner
 function loading_appear() {
   const $example = document.querySelector("#explain");
   $example.style.display = "none";

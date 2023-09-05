@@ -1,13 +1,11 @@
-// set the default active slide to the first one
+// 사용법 slider
 let slideIndex = 1;
 showSlide(slideIndex);
 
-// change slide with the prev/next button
 function moveSlide(moveStep) {
   showSlide((slideIndex += moveStep));
 }
 
-// change slide with the dots
 function currentSlide(n) {
   showSlide((slideIndex = n));
 }
@@ -24,17 +22,14 @@ function showSlide(n) {
     slideIndex = slides.length;
   }
 
-  // hide all slides
   for (i = 0; i < slides.length; i++) {
     slides[i].classList.add("hidden");
   }
 
-  // remove active status from all dots
   for (i = 0; i < dots.length; i++) {
     dots[i].classList.remove("bg-yellow-500");
     dots[i].classList.add("bg-green-600");
   }
 
-  // show the active slide
   slides[slideIndex - 1].classList.remove("hidden");
 }

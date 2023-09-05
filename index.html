@@ -32,7 +32,7 @@
                         <button
                             class="inline-block px-4 py-2 text-gray-800 no-underline btn hover:text-gray-200 hover:text-underline"
                             onclick="myCount.showModal()">내 통계</button>
-                        <dialog id="myCount" class="w-5/6 modal modal-bottom sm:modal-middle rounded-2xl">
+                        <dialog id="myCount" class="w-5/6 modal modal-bottom sm:modal-middle rounded-3xl opacity-95">
                             <div class="px-10 py-8 text-center bg-gray-400 modal-box">
                                 <h3 class="text-4xl font-bold">내 통계 🗓️</h3>
                                 <section class="p-10">
@@ -201,14 +201,14 @@
                         class="text-white  bg-blue-500 px-3 py-2.5 rounded-3xl cursor-pointer mb-10">요청
                     </button>
                 </form>
-                <div class="flex flex-col w-96 max-h-[680px]">
+                <div class="flex flex-col w-96">
                     <p class="text-2xl font-bold text-center mb-9">AI 🤖
                     </p>
                     <p class="mb-4">
                         AI의 답변
                     </p>
                     <div id="ai-answer" class="relative px-6 py-4 mb-6 overflow-auto text-gray-400 border rounded-xl"
-                        style="min-width: 100%; min-height:68%;">
+                        style="min-width: 100%; max-height: 320px; min-height:68%;">
                         <div class="absolute transform translate-x-1/2 translate-y-1/2 right-1/2 bottom-1/2">
                             <div id="loading"
                                 class="hidden w-24 border-4 border-blue-400 border-solid rounded-full border-t-transparent animate-spin">
@@ -226,7 +226,7 @@
             </div>
         </section>
     </main>
-    <footer class="flex flex-row items-center justify-between w-full px-12 py-3 mt-20 bg-slate-300">
+    <footer class="flex flex-row items-center justify-between w-full px-12 py-3 mt-20" style="background-color:#ddd; ">
         <p class="text-sm font-bold">Copyright © Auto Coding 2023</p>
         <nav>
             <div class="flex flex-row gap-10 text-md">
@@ -243,8 +243,8 @@
             </div>
         </nav>
     </footer>
-    <script src="src/js/sliders.js"></script>
     <script type="module" src="src/js/app.js"></script>
+    <script src="src/js/sliders.js"></script>
     <script src="src/js/mypage.js"></script>
     <script src="src/js/navbar.js"></script>
 </body>

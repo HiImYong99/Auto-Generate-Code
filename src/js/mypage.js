@@ -1,8 +1,9 @@
 const $use_count = document.querySelector("#use-count");
 const $lang_count = document.querySelector("#lang-count");
 const $method_count = document.querySelector("#method-count");
-// const $remove_btn = document.querySelector("#local-remove");
+const $modal_btn = document.querySelector("#info-link");
 
+// 배열에 저장된 lang값과 method값을 가져옴, 그 값들은 write_count 인자로 전달함
 function load_count() {
   let lang = localStorage.getItem("lang")
     ? JSON.parse(localStorage.getItem("lang"))
@@ -11,9 +12,7 @@ function load_count() {
   let method = localStorage.getItem("method")
     ? JSON.parse(localStorage.getItem("method"))
     : [];
-  let detail = localStorage.getItem("detail")
-    ? JSON.parse(localStorage.getItem("detail"))
-    : [];
+
   if (lang.length === 0) {
     console.log("빈배열 실행");
 
@@ -21,32 +20,12 @@ function load_count() {
     $lang_count.innerText = "0회";
     $method_count.innerText = "0회";
   } else {
-    write_count(lang, method, detail);
-    return [lang, method, detail];
+    write_count(lang, method);
+    return [lang, method];
   }
 }
 
-function write_count(lang, method, detail) {
-  let most_lang_name = getSortedArr(lang)[0][0];
-  let most_lang_count = getSortedArr(lang)[0][1];
-  let most_method_name = getSortedArr(method)[0][0];
-  let most_method_count = getSortedArr(method)[0][1];
-
-  $use_count.innerText = lang.length + "회";
-  $lang_count.innerText = `${most_lang_name} ( ${most_lang_count}회 )`;
-  $method_count.innerText = `${most_method_name} ( ${most_method_count}회 )`;
-}
-load_count();
-
-// $remove_btn.addEventListener("click", () => {
-//   if (confirm("정말 사용했던 기록을 초기화 하시겠습니까?")) {
-//     localStorage.removeItem("lang");
-//     localStorage.removeItem("method");
-//     localStorage.removeItem("detail");
-//     load_count();
-//   }
-// });
-
+// 저장한 데이터 정렬 및 최빈값 리턴
 function getSortedArr(array) {
   // 1. 출연 빈도 구하기
   const counts = array.reduce((pv, cv) => {
@@ -67,3 +46,20 @@ function getSortedArr(array) {
 
   return result;
 }
+
+// 정렬된 아이템과 최빈값을 html 문서에 작성
+function write_count(lang, method) {
+  let most_lang_name = getSortedArr(lang)[0][0];
+  let most_lang_count = getSortedArr(lang)[0][1];
+  let most_method_name = getSortedArr(method)[0][0];
+  let most_method_count = getSortedArr(method)[0][1];
+
+  $use_count.innerText = lang.length + "회";
+  $lang_count.innerText = `${most_lang_name} ( ${most_lang_count}회 )`;
+  $method_count.innerText = `${most_method_name} ( ${most_method_count}회 )`;
+}
+
+// 내 통계 버튼을 클릭할 시 새로고침
+$modal_btn.addEventListener("click", () => {
+  load_count();
+});
