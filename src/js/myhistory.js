@@ -48,7 +48,10 @@ function write_history(detail, ai) {
 load_history();
 
 $remove_btn.addEventListener("click", () => {
-  if (confirm("정말 사용했던 기록을 초기화 하시겠습니까?")) {
+  if (confirm("정말 저장된 모든 기록을 초기화 시키겠습니까?")) {
+    localStorage.removeItem("lang");
+    localStorage.removeItem("method");
+    localStorage.removeItem("detail");
     localStorage.removeItem("detail");
     localStorage.removeItem("ai");
     load_history();

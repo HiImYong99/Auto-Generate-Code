@@ -1,7 +1,7 @@
 const $use_count = document.querySelector("#use-count");
 const $lang_count = document.querySelector("#lang-count");
 const $method_count = document.querySelector("#method-count");
-const $remove_btn = document.querySelector("#local-remove");
+// const $remove_btn = document.querySelector("#local-remove");
 
 function load_count() {
   let lang = localStorage.getItem("lang")
@@ -38,14 +38,14 @@ function write_count(lang, method, detail) {
 }
 load_count();
 
-$remove_btn.addEventListener("click", () => {
-  if (confirm("정말 사용했던 기록을 초기화 하시겠습니까?")) {
-    localStorage.removeItem("lang");
-    localStorage.removeItem("method");
-    localStorage.removeItem("detail");
-    load_count();
-  }
-});
+// $remove_btn.addEventListener("click", () => {
+//   if (confirm("정말 사용했던 기록을 초기화 하시겠습니까?")) {
+//     localStorage.removeItem("lang");
+//     localStorage.removeItem("method");
+//     localStorage.removeItem("detail");
+//     load_count();
+//   }
+// });
 
 function getSortedArr(array) {
   // 1. 출연 빈도 구하기

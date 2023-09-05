@@ -1,9 +1,9 @@
 import { data } from "./data.js";
 
-const $form = document.querySelector("form");
+const $form = document.querySelector("#user-form");
 const $input_lang = document.querySelector("#language");
 const $input_method = document.querySelector("#method");
-const $btn = document.querySelector("#btn");
+const $btn = document.querySelector("#submit-btn");
 const $input_text = document.querySelector("#detail-content");
 const $output_text = document.querySelector("#ai-answer");
 const $loading = document.querySelector("#loading");
@@ -21,7 +21,7 @@ let questionData = [];
 const sendQuestion = (lang, method, detail) => {
   data.push({
     role: "user",
-    content: `프로그래밍 언어는 ${lang}이고 ${detail}이걸 ${method} 해줘 `,
+    content: `프로그래밍 언어는 ${lang}이고 ${detail}이걸 ${method} 해줘`,
   });
   questionData.push({
     role: "user",
