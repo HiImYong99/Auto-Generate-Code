@@ -184,7 +184,7 @@ Auto-Coding은 AI가 코드를 대신 작성해 주는 서비스입니다.
 
 ![Alt text](./asset/img/myerror.png)
 
-> **🔗 Errors**: [노션 링크](https://www.notion.so/c6755304ce754d88a421a03cab44d8d9?pvs=4){:target="_blank"}
+> **🔗 Errors**: [노션 링크](https://www.notion.so/c6755304ce754d88a421a03cab44d8d9?pvs=4{:target="\_blank"})
  <!--  <a href="https://www.notion.so/c6755304ce754d88a421a03cab44d8d9?pvs=4" target="_blank">노션 링크 </a> -->
  <br>
 
