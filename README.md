@@ -6,7 +6,7 @@
 <div align="center">
 <img width="329" src="asset/img/auto-coding-logo.png" >
 
-<!-- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhiimyong99.github.io%2FAuto-Generate-Code%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) -->
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhiimyong99.github.io%2FAuto-Generate-Code%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 </div>
 
@@ -47,7 +47,7 @@ Auto-Coding은 AI가 코드를 대신 작성해 주는 서비스입니다.
 
 ## <span id="url">배포 주소 🔗
 
-> **🔗 Github Pages**: <a href="https://hiimyong99.github.io/Auto-Generate-Code/" target="_blank"> https://hiimyong99.github.io/Auto-Generate-Code/ </a>
+> **🔗 Github Pages**: <a href="https://hiimyong99.github.io/Auto-Generate-Code/" target="_blank"> https://hiimyong99.github.io/Auto-Generate-Code/</a>
 
 ---
 
@@ -151,7 +151,7 @@ Auto-Coding은 AI가 코드를 대신 작성해 주는 서비스입니다.
 - 사용자가 선택한 option과 입력한 세부내용들을 요청버튼을 클릭하여 AI에게 데이터를 요청합니다.
 
 - AI에게 응답 받은 내용을 html 문서에 출력합니다.
-  <br><br>
+  <br>
 
 |                내 통계                 |
 | :------------------------------------: |
@@ -161,7 +161,7 @@ Auto-Coding은 AI가 코드를 대신 작성해 주는 서비스입니다.
 
 - 위 통계는 사용자가 AI에게 요청할 때 입력한 내용들이 로컬스토리지에 저장되어 관리되었습니다.
 
-  <br><br>
+  <br>
 
 |                 내 기록                 |
 | :-------------------------------------: |
