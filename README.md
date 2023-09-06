@@ -48,6 +48,7 @@ Auto-Coding은 AI가 코드를 대신 작성해 주는 서비스입니다.
 ## <span id="url">배포 주소 🔗
 
 > **🔗 Github Pages**: <a href="https://hiimyong99.github.io/Auto-Generate-Code/" target="_blank"> https://hiimyong99.github.io/Auto-Generate-Code/</a>
+
 ---
 
 ## <span id="planning"> 프로젝트 일정 🗓️
@@ -183,7 +184,7 @@ Auto-Coding은 AI가 코드를 대신 작성해 주는 서비스입니다.
 ![Alt text](./asset/img/myerror.png)
 
 > **🔗 Errors**: <a href="https://www.notion.so/c6755304ce754d88a421a03cab44d8d9?pvs=4" target="_blank">노션 링크 </a>
- <br>
+> <br>
 
 ## <span id = "future">추후 계획 🌅
 
