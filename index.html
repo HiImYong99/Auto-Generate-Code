@@ -8,31 +8,30 @@
     <link href="dist/output.css" rel="stylesheet">
     <link rel="shortcut icon" href="asset/img/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"> -->
 </head>
 
 <body class="font-GmarketSansMedium">
-
+    <!-- 상단 메뉴바 -->
     <header>
         <div class="fixed top-0 z-10 flex flex-wrap items-center justify-between w-full p-6 bg-gray-400 opacity-95">
             <nav class="flex items-center flex-shrink-0 mr-6">
-                <a class=" hover:text-white" href="#">
+                <a class=" hover:text-white duration-500" href="#">
                     <span class="pl-2 text-2xl"> Auto Coding</span>
                 </a>
             </nav>
             <nav class="flex-grow hidden w-full pt-6 md:flex md:items-center md:w-auto md:pt-0" id="nav-content">
                 <ul class="items-center justify-end flex-1 list-reset md:flex">
                     <li id="howto-link" class="mr-3">
-                        <a class="inline-block px-4 py-2 text-gray-800 no-underline hover:text-gray-200 hover:text-underline"
+                        <a class="inline-block px-4 py-2 text-gray-800 no-underline duration-500 hover:text-gray-200 hover:text-underline"
                             href="#how-to">사용법</a>
                     </li>
                     <li id="start-link" class="mr-3">
-                        <a class="inline-block px-4 py-2 text-gray-800 hover:text-gray-200" href="#code-run">시작하기</a>
+                        <a class="inline-block px-4 py-2 text-gray-800 duration-500 hover:text-gray-200"
+                            href="#code-run">시작하기</a>
                     </li>
                     <li id="info-link" class="mr-3">
                         <button
-                            class="inline-block px-4 py-2 text-gray-800 no-underline btn hover:text-gray-200 hover:text-underline"
+                            class="inline-block px-4 py-2 text-gray-800 no-underline duration-500 btn hover:text-gray-200"
                             onclick="myCount.showModal()">내 통계</button>
                         <dialog id="myCount" class="w-5/6 modal modal-bottom sm:modal-middle rounded-3xl opacity-95">
                             <div class="px-10 py-8 text-center bg-gray-400 modal-box">
@@ -60,14 +59,14 @@
                                 <div class="modal-action">
                                     <form method="dialog">
                                         <button
-                                            class="btn text-white  hover:text-black px-8 py-2.5 rounded-3xl bg-red-500">닫기</button>
+                                            class="btn text-white  hover:text-black px-8 py-2.5 rounded-3xl bg-red-500 duration-500">닫기</button>
                                     </form>
                                 </div>
                             </div>
                         </dialog>
                     </li>
                     <li id="history-link" class="mr-3">
-                        <a class="inline-block px-4 py-2 text-gray-800 no-underline hover:text-gray-200 hover:text-underline"
+                        <a class="inline-block px-4 py-2 text-gray-800 no-underline hover:text-gray-200 hover:text-underline duration-500"
                             href="./pages/myhistroy.html">내 기록</a>
                     </li>
                 </ul>
@@ -82,6 +81,7 @@
                 </button>
             </div>
         </div>
+        <!-- 로고 이미지 -->
         <h1 class="flex flex-col items-center justify-center">
             <a href="#" class="cursor-default"><img src="asset/img/auto-coding-logo.png" alt="Auto-Coding" width="600"
                     height="400"></a>
@@ -147,8 +147,6 @@
 
                 <a class="absolute left-0 p-4 text-white -translate-y-1/2 rounded-full cursor-pointer top-1/2 bg-black/30 hover:bg-black/50"
                     onclick="moveSlide(-1)">❮</a>
-
-
                 <a class="absolute right-0 p-4 text-white -translate-y-1/2 rounded-full cursor-pointer top-1/2 bg-black/30 hover:bg-black/50"
                     onclick="moveSlide(1)">❯</a>
             </div>
@@ -199,8 +197,7 @@
                     <label for="detail-content" class="mb-4">세부내용</label>
                     <textarea name="detail" id="detail-content" cols="30" rows="10" placeholder="코드나 요청사항을 입력하세요."
                         required spellcheck="false" class="px-6 py-4 mb-6 border resize-none rounded-xl"></textarea>
-                    <button type="submit"
-                        class="text-white  bg-blue-500 px-3 py-2.5 rounded-3xl cursor-pointer mb-10">요청
+                    <button type="submit" class="text-white bg-blue-500 px-3 py-2.5 rounded-3xl cursor-pointer mb-10">요청
                     </button>
                 </form>
                 <div class="flex flex-col w-96">
@@ -209,13 +206,14 @@
                     <p class="mb-4">
                         AI의 답변
                     </p>
+                    <!-- 로딩 스피너 -->
                     <div id="ai-answer" class="relative px-6 py-4 mb-6 overflow-auto text-gray-400 border rounded-xl"
                         style="min-width: 100%; max-height: 320px; min-height:68%;">
                         <div class="absolute transform translate-x-1/2 translate-y-1/2 right-1/2 bottom-1/2">
-                            <div id="loading" class="w-12 h-12 rounded-full animate-spin
-                            border-4 border-solid border-blue-500 border-t-transparent hidden"></div>
+                            <div id="loading"
+                                class="hidden w-12 h-12 border-4 border-blue-500 border-solid rounded-full animate-spin border-t-transparent">
+                            </div>
                         </div>
-
                         <p id="explain">
                             AI의
                             답변이 제공됩니다.
@@ -228,16 +226,16 @@
             </div>
         </section>
     </main>
-    <footer class="flex flex-row items-center justify-between w-full px-12 py-3 mt-20" style="background-color:#ddd; ">
+    <footer class="flex flex-row items-center justify-between w-full px-12 py-3 mt-20" style="background-color:#ddd;">
         <p class="text-sm font-bold">Copyright © Auto Coding 2023</p>
         <nav>
             <div class="flex flex-row gap-10 text-md">
-                <div class="rounded-full hover:bg-blue-300">
+                <div class="rounded-full">
                     <a href="https://www.instagram.com/yong_9_9/" target="_blank">
                         <img class="w-10" src="asset/img/instagram.png" alt="인스타그램">
                     </a>
                 </div>
-                <div class="rounded-full hover:bg-blue-300">
+                <div class="rounded-full">
                     <a href="https://github.com/HiImYong99" target="_blank">
                         <img class="w-10" src="asset/img/github.png" alt="깃허브">
                     </a>
