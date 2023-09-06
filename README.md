@@ -6,7 +6,7 @@
 <div align="center">
 <img width="329" src="asset/img/auto-coding-logo.png" >
 
-<!-- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhiimyong99.github.io%2FAuto-Generate-Code&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) -->
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhiimyong99.github.io%2FAuto-Generate-Code&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 </div>
 
@@ -192,7 +192,7 @@ Auto-Coding은 AI가 코드를 대신 작성해 주는 서비스입니다.
 
 ## <span id="impression">느낀점 🧑‍💻
 
-- 이번 프로젝트를 통해 기획단계의 중요성을 몸소 깨달을 수 있었습니다. 프로젝트를 진행할 때 카카오 오븐을 이용하여 프로토 타입을 제작하기 했지만 기초적인 UI만을 그리고 바로 개발단계에 도입하였는데 개발 도중 UI를 수정하는 일이 빈번해져 프로젝트 진행 하는데 어려움을 겪었습니다. 이후의 프로젝트에서는 좀 더 구체적이고 체계적인 기획 단계를 거쳐 효율적으로 진행할 계획입니다.
+- 이번 프로젝트를 통해 기획단계의 중요성을 몸소 깨달을 수 있었습니다. 프로젝트를 진행할 때 카카오 오븐을 이용하여 프로토 타입을 제작하기 했지만 기초적인 UI만을 구성하고 바로 개발단계에 도입하였는데 개발 도중 UI를 수정하는 일이 빈번해져 프로젝트 진행 하는데 어려움을 겪었습니다. 이후의 프로젝트에서는 좀 더 구체적이고 체계적인 기획 단계를 거쳐 효율적으로 진행할 계획입니다.
 
 - 항상 혼자 개발 공부를 시작하면 프로젝트의 끝을 본 적이 없고 흐지부지 마무리됐었는데 이번에 처음으로 프로젝트를 완성하면서 부족한 점을 확인 할 수 있었습니다. 다음 프로젝트에는 이 부분들을 보완하여 보다 완성도 있는 코드와 결과물을 만들고 싶다는 욕심이 생겼습니다.
 
