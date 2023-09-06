@@ -1,3 +1,4 @@
+//서버와의 통신 js
 import { data } from "./data.js";
 import { save_Item } from "./local-storage.js";
 

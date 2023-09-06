@@ -1,3 +1,5 @@
+// 언어 목적 세부내용 로컬스토리지 관리위한 js
+
 // 언어, 목적, 세부내용 로컬 스토리지에 저장
 export function save_Item(lang, method, detail) {
   let lang_arr = load_Item()[0];

@@ -1,3 +1,4 @@
+// 내 통계를 위한 js
 const $use_count = document.querySelector("#use-count");
 const $lang_count = document.querySelector("#lang-count");
 const $method_count = document.querySelector("#method-count");
@@ -8,14 +9,12 @@ function load_count() {
   let lang = localStorage.getItem("lang")
     ? JSON.parse(localStorage.getItem("lang"))
     : [];
-  lang ? console.log(lang) : console.log("없어");
+
   let method = localStorage.getItem("method")
     ? JSON.parse(localStorage.getItem("method"))
     : [];
 
   if (lang.length === 0) {
-    console.log("빈배열 실행");
-
     $use_count.innerText = "0회";
     $lang_count.innerText = "0회";
     $method_count.innerText = "0회";

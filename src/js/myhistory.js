@@ -1,3 +1,4 @@
+// 요청 답변 기록js
 const $remove_btn = document.querySelector("#history-remove");
 const $question = document.querySelector("#question");
 const $result = document.querySelector("#result");
@@ -56,7 +57,6 @@ $remove_btn.addEventListener("click", () => {
     load_history();
   }
 });
-
 
 // 리스트 style 변경 모은함수
 function li_style(li) {
