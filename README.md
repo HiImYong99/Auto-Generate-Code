@@ -6,7 +6,7 @@
 <div align="center">
 <img width="329" src="asset/img/auto-coding-logo.png" >
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhiimyong99.github.io%2FAuto-Generate-Code&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+<!-- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhiimyong99.github.io%2FAuto-Generate-Code&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) -->
 
 </div>
 
@@ -24,12 +24,10 @@
 3. [프로젝트 일정](#planning)
 4. [프로젝트 구조](#tree)
 5. [기술 스택](#stack)
-6. [화면 구성](#pages)
-7. [주요 기능](#main)
-8. [주요 기능 동작](#main-exe)
-9. [겪었던 오류들](#errors)
-10. [추후 계획](#future)
-11. [느낀점](#impression)
+6. [화면 구성 및 주요 기능](#main-exe)
+7. [겪었던 오류들](#errors)
+8. [추후 계획](#future)
+9. [느낀점](#impression)
 
 ---
 
@@ -116,17 +114,11 @@ Auto-Coding은 AI가 코드를 대신 작성해 주는 서비스입니다.
 
 ---
 
-## <span id="pages">화면 구성 📺
+## <span id="main-exe">화면 구성 및 주요 기능 🚨
 
-|                    메인 페이지                    |                     메인 서비스                      |
-| :-----------------------------------------------: | :--------------------------------------------------: |
-| <img width="329" src="./asset/img/mainpage.png"/> | <img width="329" src="./asset/img/mainservice.png"/> |
-|                      내 통계                      |                    내 기록 페이지                    |
-| <img width="329" src="./asset/img/mymodal.png"/>  |  <img width="329" src="./asset/img/myhistory.png"/>  |
-
----
-
-## <span id="main">주요 기능 💻
+|               메인 페이지               |
+| :-------------------------------------: |
+| <img src="./asset/img/mainpage.png"  /> |
 
 ### ⭐️ 자동 코드 생성
 
@@ -139,10 +131,6 @@ Auto-Coding은 AI가 코드를 대신 작성해 주는 서비스입니다.
 ### ⭐️ 내 기록
 
 - 이전에 요청한 내용과 AI의 답변을 간편하게 조회할 수 있습니다. 코드와 대화가 모두 기록됩니다.
-
----
-
-## <span id="main-exe">주요 기능 동작 🚨
 
 |              사용 방법               |
 | :----------------------------------: |
